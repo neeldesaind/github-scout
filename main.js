@@ -1,8 +1,11 @@
-window.onload = function () {
-    const username = "neeldesaind";
+async function fetchUser() {
+    const username = document.getElementById('txtSearch').value;
+    if (!username) {
+        alert("Please enter a username!");
+        return;
+    }
     document.getElementById('profileDiv').classList.add('hidden');
     document.getElementById('errorP').classList.add('hidden');
-
     const url = `https://api.github.com/users/${username}`;
     const xhr = new XMLHttpRequest();
 
@@ -11,6 +14,7 @@ window.onload = function () {
         if (xhr.status === 200) {
             const user = JSON.parse(xhr.responseText);
 
+            // Update profile with user data
             document.getElementById('avatar').src = user.avatar_url;
             document.getElementById('name').textContent = user.name || 'Not Available';
             document.getElementById('bio').textContent = user.bio || 'Not Available';
@@ -23,6 +27,7 @@ window.onload = function () {
             document.getElementById('created').textContent = new Date(user.created_at).toLocaleDateString() || 'Not Available';
             document.getElementById('updated').textContent = new Date(user.updated_at).toLocaleDateString() || 'Not Available';
 
+            // Show profile and hide error message
             document.getElementById('profileDiv').classList.remove('hidden');
             document.getElementById('errorP').classList.add('hidden');
         } else if (xhr.status === 404) {
@@ -43,4 +48,4 @@ window.onload = function () {
     };
 
     xhr.send();
-};
+}

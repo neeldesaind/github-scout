@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Github Profile Display</title>
+    <title>Github Profile Search</title>
     <script src="main.js"></script>
     <link rel="stylesheet" href="script.css" />
   </head>
@@ -11,6 +11,13 @@
     <div class="container">
       <div class="search-container">
         <h1>Github Scout</h1>
+        <input
+          type="text"
+          id="txtSearch"
+          placeholder="Enter Github Profile..."
+          required
+        />
+        <button id="btnSearch" onclick="fetchUser()">Search</button>
       </div>
 
       <div id="profileDiv" class="profile hidden">
