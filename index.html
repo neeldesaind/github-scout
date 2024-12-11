@@ -19,7 +19,6 @@
         />
         <button id="btnSearch" onclick="fetchUser()">Search</button>
       </div>
-
       <div id="profileDiv" class="profile hidden">
         <img id="avatar" src="" alt="Avatar" class="avatar" />
         <div class="profile-info">
@@ -46,6 +45,20 @@
             <span id="updated">Not Available</span>
           </div>
         </div>
+
+        <div class="details-section">
+          <button id="viewFollowersBtn" onclick="viewFollowers()">
+            View Followers
+          </button>
+          <button id="viewFollowingBtn" onclick="viewFollowing()">
+            View Following
+          </button>
+          <button id="viewReposBtn" onclick="viewRepos()">
+            View Repositories
+          </button>
+        </div>
+
+        <div id="detailsDiv" class="details hidden"></div>
       </div>
 
       <p id="errorP" class="hidden"></p>
