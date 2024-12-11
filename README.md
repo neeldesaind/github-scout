@@ -44,4 +44,4 @@ cd github-profile-search
 Feel free to fork this repository and make changes. If you find any issues or want to add features, feel free to create a pull request.
 
 ## License
-This project is open-source and available under the [MIT License](https://github.com/neeldesaind/github-profile/blob/main/LICENSE).
+This project is open-source and available under the [MIT License](https://github.com/neeldesaind/github-scout/blob/main/LICENSE).
